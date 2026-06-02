@@ -1,64 +1,155 @@
 /* ==========================================================================
-   CONFIGURAÇÕES GERAIS E VARIÁVEIS
+   CONFIGURAÇÕES GERAIS / RESET
    ========================================================================== */
-:root {
-    --cor-principal: #4f46e5; /* Roxo/Indigo */
-    --cor-principal-hover: #4338ca;
-    --cor-fundo: #f9fafb;
-    --cor-texto: #1f2937;
-    --cor-texto-mutado: #6b7280;
-    --cor-branco: #ffffff;
-    --cor-preto: #111827;
-    --cor-alerta: #ef4444;
-    --fonte-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif; /* Fonte moderna muito usada em moda */
 }
 
 body {
-    font-family: var(--fonte-principal);
-    background-color: var(--cor-fundo);
-    color: var(--cor-texto);
-    line-height: 1.6;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-    transition: color 0.3s ease;
-}
-
-img {
-    max-width: 100%;
-    display: block;
-}
-
-/* Container para alinhar o conteúdo no centro */
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* ==========================================================================
-   BARRA DE AVISO (TOP BAR)
-   ========================================================================== */
-.barra-aviso {
-    background-color: var(--cor-preto);
-    color: var(--cor-branco);
-    text-align: center;
-    padding: 8px 0;
-    font-size: 0.85rem;
-    font-weight: 600;
-    letter-spacing: 1px;
+    background-color: #f9f9f9;
+    color: #222222;
 }
 
 /* ==========================================================================
    HEADER / NAVEGAÇÃO
    ========================================================================== */
-.
+header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #eaeaea;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #555;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #000000;
+}
+
+/* ==========================================================================
+   VITRINE DE PRODUTOS (GRID)
+   ========================================================================== */
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.vitrine-titulo {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.grid-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+/* ==========================================================================
+   CARD DO PRODUTO
+   ========================================================================== */
+.card-produto {
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-produto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.imagem-produto {
+    width: 100%;
+    height: 350px;
+    object-fit: cover; /* Garante que a foto da roupa não fique distorcida */
+    background-color: #f0f0f0;
+}
+
+.info-produto {
+    padding: 15px;
+    text-align: center;
+}
+
+.nome-produto {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.preco-produto {
+    font-size: 18px;
+    color: #000000;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+/* ==========================================================================
+   BOTÕES
+   ========================================================================== */
+.btn-adicionar {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-adicionar:hover {
+    background-color: #333333;
+}
+
+/* Tag de "Novidade" ou "Promoção" */
+.tag-produto {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 5px 10px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
