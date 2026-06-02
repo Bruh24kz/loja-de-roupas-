@@ -1,0 +1,64 @@
+/* ==========================================================================
+   CONFIGURAÇÕES GERAIS E VARIÁVEIS
+   ========================================================================== */
+:root {
+    --cor-principal: #4f46e5; /* Roxo/Indigo */
+    --cor-principal-hover: #4338ca;
+    --cor-fundo: #f9fafb;
+    --cor-texto: #1f2937;
+    --cor-texto-mutado: #6b7280;
+    --cor-branco: #ffffff;
+    --cor-preto: #111827;
+    --cor-alerta: #ef4444;
+    --fonte-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fonte-principal);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Container para alinhar o conteúdo no centro */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ==========================================================================
+   BARRA DE AVISO (TOP BAR)
+   ========================================================================== */
+.barra-aviso {
+    background-color: var(--cor-preto);
+    color: var(--cor-branco);
+    text-align: center;
+    padding: 8px 0;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* ==========================================================================
+   HEADER / NAVEGAÇÃO
+   ========================================================================== */
+.
